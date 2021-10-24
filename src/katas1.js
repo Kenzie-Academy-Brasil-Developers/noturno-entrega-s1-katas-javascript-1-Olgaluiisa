@@ -4,7 +4,7 @@ function oneThroughTwenty() {
    Write a for or a while loop
    return the result*/
   let meuRetorno = [];
-   for(let contador = 0; contador <= 20; contador++){
+   for(let contador = 1; contador <= 20; contador++){
      meuRetorno.push(contador);
      
    }
@@ -22,9 +22,13 @@ function evensToTwenty() {
    return the result */
 
    let meuRetorno = [];
-   for(let contador = 0; contador <= 20; contador += 2){
-     meuRetorno.push(contador);
-     
+   let contador = 1
+   while(contador <= 20){
+     if(contador % 2 === 0){
+       meuRetorno.push(contador);
+       
+     } 
+     contador++     
    }
    
     return meuRetorno
@@ -57,10 +61,11 @@ function multiplesOfFive() {
   /* Your code goes below
   Write a for or a while loop
   return the result */
-  let meuRetorno = [];
-  for(let contador = 0; contador <= 100; contador += 5){
-    meuRetorno.push(contador);
-    
+  let meuRetorno = []; 
+  for (let contador = 1; contador <= 100; contador++){
+    if(contador % 5 === 0){
+      meuRetorno.push(contador);   
+    } 
   }
    return meuRetorno
 }
@@ -73,8 +78,16 @@ function squareNumbers() {
  /* Your code goes below
   Write a for or a while loop
   return the result */
-  
+  let meuRetorno = []; 
+  for (let contador = 1; contador <= 10; contador++){
+      indice = contador * contador;
+      meuRetorno.push(indice);   
+     
+  }
+   return meuRetorno
 }
+console.log(squareNumbers());
+
 
 
 //call function squareNumbers
@@ -86,7 +99,7 @@ function countingBackwards() {
   return the result */
   let meuRetorno = [];
 
-   for(let contador = 20; contador >= 0; contador--){
+   for(let contador = 20; contador >= 1; contador--){
      meuRetorno.push(contador);
      
    }
@@ -102,10 +115,12 @@ function evenNumbersBackwards() {
   Write a for or a while loop
   return the result */
   let meuRetorno = [];
-
-   for(let contador = 20; contador >= 0; contador -= 2){
-     meuRetorno.push(contador);
-     
+  let contador = 20;
+   while(contador >= 1){
+     if(contador % 2 === 0){
+      meuRetorno.push(contador);
+     }
+     contador--   
    }
     return meuRetorno
 }
@@ -137,9 +152,10 @@ function multiplesOfFiveBackwards() {
   return the result */
   let meuRetorno = [];
 
-   for(let contador = 100; contador >= 0; contador -= 5){
-     meuRetorno.push(contador);
-     
+   for(let contador = 100; contador >= 1; contador--){
+     if(contador % 5 === 0){
+      meuRetorno.push(contador);
+     }   
    }
     return meuRetorno
 }
@@ -152,6 +168,15 @@ function squareNumbersBackwards() {
    /* Your code goes below
   Write a for or a while loop
   return the result */
+  let meuRetorno = [];
+
+   for(let contador = 10; contador >= 1; contador--){
+      indice = contador * contador;
+      meuRetorno.push(indice);    
+   }
+    return meuRetorno
 }
+console.log(squareNumbersBackwards());
+
 
 //call function squareNumbersBackwards
